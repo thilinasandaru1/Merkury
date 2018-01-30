@@ -1,0 +1,86 @@
+//Responsive
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    
+} 
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+    #features {
+        margin-top: 0;
+        padding-top: 1em;
+        
+        .last a.btn {
+            margin-top: 1.15em !important;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+    .home-section {
+        nav {
+            ul {
+                margin-top: 20px;
+            }
+            .btn {
+                margin-left: -6px;
+                margin-top: 6px;
+            }
+        }   
+    }
+
+    #features {
+        .col-md-4 {
+            margin-top: 3em;
+            h5 {
+
+                &:after {
+                    content: "";
+                    border: 0 !important;
+                }
+            }
+
+            a {
+                margin-top: 1em !important;
+            }
+
+        }
+
+        .last {
+            h5 {
+                margin-top: -0.4em;
+            }
+
+            a {
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+    #features {
+        .col-md-4 {
+            h5 {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 0.1em;
+                    border-top: 0.01em solid $home_content_h4;
+                    top: -1em;
+                    left: 12.2em;
+                    width: 6em;
+                }
+            }
+        }
+        .last {
+            h5:after {
+                content: "";
+                border: none;
+            }
+        }
+    }
+}

@@ -50,34 +50,61 @@
             }
         }
         img {
-            -webkit-box-shadow: -7px -11px 122px -6px rgba(85,133,255,0.196);
-            -moz-box-shadow: -7px -11px 122px -6px rgba(85,133,255,0.196);
-            box-shadow: -7px -11px 122px -6px rgba(85,133,255,0.196);
+            -webkit-box-shadow: -7px -11px 122px -6px rgba(85, 133, 255, 0.196);
+            -moz-box-shadow: -7px -11px 122px -6px rgba(85, 133, 255, 0.196);
+            box-shadow: -7px -11px 122px -6px rgba(85, 133, 255, 0.196);
         }
     }
 }
 
-//Responsive
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    .home-section {
-        nav {
-            ul {
-                margin-top: 20px;
+//features section
+#features {
+    padding-top: 10em;
+    .col-md-4 {
+        img {
+            max-width: 18%;
+            max-height: 18%;
+            position: relative;
+        }
+        h5 {
+            font-weight: 700;
+            color: $main-blue;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                height: 0.1em;
+                border-top: 0.01em solid $home_content_h4;
+                top: -1em;
+                left: 14.2em;
+                width: 8em;
             }
-            .btn {
-                margin-left: -6px;
-                margin-top: 6px;
+        }
+        p {
+            color: $home_content_h4;
+            font-size: 1em;
+        }
+        a {
+            color: $main-blue;
+            font-weight: 700;
+            border: 1px solid $home_content_h4;
+            padding-left: 4em;
+            padding-right: 4em;
+            &:hover {
+                background-color: transparent;
+                color: $light-blue;
+                border-color: $light-blue;
             }
+        }
+    }
+
+    //hide last border from features section
+    .last {
+        h5:after {
+            content: "";
+            border: none;
         }
     }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@import 'responsive';
